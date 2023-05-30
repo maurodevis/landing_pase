@@ -6,7 +6,8 @@
 }
 
 .body{
-    font-family: courtier; 
+    font-family: courtier;
+    height: 100%; 
 }
 
 .grid-container{
@@ -19,8 +20,7 @@
     "header"
     "navbar"
     "main"
-    "footer"
-    ;
+    "footer";
 }
     
 .e1{
