@@ -1,0 +1,139 @@
+.header{
+    background-color: orange;
+    min-height: 940px;
+    min-width: 100%;
+    
+}
+
+.body{
+    font-family: courtier; 
+}
+
+.grid-container{
+    font-family: courtier;
+    font-weight:100;
+    font-size: 20px;
+    min-height: 50%;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "navbar"
+    "main"
+    "footer"
+    ;
+}
+    
+.e1{
+    list-style-type: class="btn btn-outline-primary";
+}
+
+.input_resultado{
+    min-width: 500px;
+    min-height: 500px;
+}
+
+.titulo_principal{
+    font-size: 80px;
+    padding-left: 6%;
+    padding-top: 10%;
+    font-weight: bold;
+}
+
+.t1{
+    color:  #DAE713 ;
+}
+
+.subtitulo{
+    font-size: 28px;
+    padding-left: 6%;
+    padding-top: 4%;
+    font-weight: bold;
+}
+
+.sub1{
+    color: #2986DE;
+}
+
+#btn_principal{
+    min-height: 50%;
+    min-width: 14%;
+    position: relative;
+    left: 6%;
+    font-size: 20px;
+    list-style-type: class="btn btn-outline-primary";
+    background-color: write;
+    border-radius: 40px;
+}
+
+.div{
+    padding-top: 8%;
+    
+}
+
+#tabla{
+    height: 50%;
+    width: 14%;
+    overflow:scroll; 
+    height:300px;
+    width: auto;
+    display: none;
+}
+
+.conten{
+    min-width: 50%;
+    height: 100%;
+    margin-top: 6%;
+}
+
+.contenedor1{
+    height: 40%;
+    display: flex;
+}
+
+.contenedor2 {
+    min-height: 6%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+    justify-content: space-between;
+}
+
+.contenedor3{
+    height: 40%;
+    display: flex;
+    padding: 2%;
+    justify-content: space-between;
+}
+
+.contenedor4{
+    height: 40%;
+    display: flex;
+    padding: 2%;
+    justify-content: space-between;
+}
+
+.contenedor5{
+    height: 40%;
+    display: flex;
+    padding: 2%;
+    justify-content: space-between;
+}
+
+.contenedor6{
+    display: flex;
+    justify-content: space-between  ;
+}
+
+
+.img_principal {
+    max-width: 100%;
+    max-height: 100%;
+    float: right;
+    padding-top: 18%;
+    padding-right: 20%; 
+    border-radius: 16em;
+}
+
+#resultado12{
+    width: 500px;
+}
