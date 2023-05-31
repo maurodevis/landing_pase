@@ -1,8 +1,6 @@
 // funcion para hacer scrol sin utilizar el mouse, ejecutada por un boton que lo lleva a otra seccion con un "onclick"
 function navegar(div1) {
-  document.getElementById(div1);
   location.hash = "#" + div1;
-  navegar("div1");
 }
 
 //1	Imprimir los números del 1 al 50 cada uno con su respectivo cuadrado.
@@ -30,7 +28,7 @@ function alcuadrado() {
   tabla.appendChild(tblBody);
   b.appendChild(tabla);
   tabla.setAttribute("class", "table table-table table-striped table-dark");
-  document.getElementById("tabla").style.display="block"; 
+  document.getElementById("tabla").style.display = "block";
 
 }
 
@@ -131,7 +129,7 @@ arreglo1.push(parseInt(Math.random()*(10)));
   c.value = `repetidos ${repetidos}`
 }
 
-// 8 convertir numero ingresado de decimal a binario y de binario a decimal
+// 8 y 9 convertir numero ingresado de decimal a binario y de binario a decimal
 function decimal_binario() {
   let num = document.getElementById("num").value;
   let tipo = document.querySelector('input[name="tipo"]:checked').value;
@@ -184,33 +182,23 @@ function Multiplicar() {
   c.value = `Resultado: ${resultado}`
 }
 
+
 //11 Hallar producto punto entre dos arreglos
 function producto_punto() {
   let a = document.getElementById("resul11");
   let b = document.getElementById("resu11");
-  let c = document.getElementById("re11");
-  let d = document.getElementById("producto_punto");
-
-
+  let h = document.getElementById("producto");
+  //let h = document.getElementById("producto_punto");
   let arreglo1 = [1, 4, 7, 8, 5, 2];
   let arreglo2 = [9, 6, 3, 1, 5, 7];
-  let resultado = []
 
   a.value = `Arreglo1=[${arreglo1}]`
   b.value = `Arreglo2=[${arreglo2}]`
-
-
+  c = 0;
   for (i = 0; i < arreglo1.length; i++) {
-    resultado.push((arreglo1[i] * arreglo2[i]))
+    c = c + (arreglo1[i] * arreglo2[i]);
   }
-
-  c.value = `Arr1 * Arr2=[${resultado}]`
-
-  let producto = resultado.reduce((ValorAnterior, ValorActual) => {
-    return ValorAnterior + ValorActual;
-  })
-
-  d.value = `producto punto= ${producto}`
+  h.value = `producto ${c}`;
 }
 
 /*12	En el 2022 el país A tendrá una población de 25 millones de habitantes y el país B de 18,9 millones,
@@ -218,17 +206,17 @@ function producto_punto() {
  para informar en que año la población del país B superará a la de A.*/
 
 function poblacion() {
-  let a=document.getElementById("resultado12");
+  let a = document.getElementById("resultado12");
   let paisA = 25000000;
   let paisB = 18900000;
-  let años = 0 ;
+  let años = 0;
 
   while (paisA > paisB) {
     paisA = paisA + 500000;
     paisB = paisB + 567000;
     años++
   }
-  a.value= `la poblacion B superara la poblacion A en: ${años} años`
+  a.value = `la poblacion B superara la poblacion A en: ${años} años`
 }
 
 /*13	Escribir un programa que muestre la suma de la serie (1*1)+(2*2)+(3*3)+(4*4)…(n*n) hasta que 
@@ -262,17 +250,35 @@ function secuencia() {
 //14	Transforme el siguiente for: en su correspondiente while.
 /*for (a = 0, b = 0; a < 7; a++, b += 2){
   console.log(a,b)
-  }*/ 
+  }*/
+function while14() {
+  var r = document.getElementById("tabla");
+  //let h = document.getElementById("resultado14");
+  let a = 0;
+  let b = 0;
 
-  
-function while14(){
-let h=document.getElementById("resultado14");
-let a=0;  
-let b=0;
-  while(a < 7){
-    b+=2;
+  var tabla = document.createElement("table");
+  var tblBody = document.createElement("tbody"); 00
+
+  while (a < 7) {
+    b += 2;
     a++;
-    console.log(a,b)
+    var hilera = document.createElement("tr");
+
+    for (var j = 0; j < 7; j++) {
+      var celda = document.createElement("td");
+      var textoCelda = document.createTextNode(`Numero`);
+      celda.appendChild(textoCelda);
+      hilera.appendChild(celda);
+      var celda = document.createElement("td");
+
+      celda.appendChild(textoCelda);
+      hilera.appendChild(celda);
+    }
+    tblBody.appendChild(hilera);
   }
+  tabla.appendChild(tblBody);
+  r.appendChild(tabla);
+  tabla.setAttribute("class", "table table-table table-striped table-dark");
 
 }
